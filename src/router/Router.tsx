@@ -1,9 +1,10 @@
 import React from "react";
-import { RouterInitial } from "./Stack.routes";
+import { AppStack } from "./Stack.routes";
 import { NavigationContainer } from "@react-navigation/native";
+import { AppTab } from "./Tab.routes";
 
 export function Router() {
   return (
-      <RouterInitial />
+      <AppTab />
   );
 }

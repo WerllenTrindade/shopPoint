@@ -11,7 +11,6 @@ import line from '../../assets/line.png'
 
 import { useHome } from './useHome';
 
-
 export function Home() {
   const {
     selectGroup,
@@ -19,7 +18,8 @@ export function Home() {
     group,
     product,
     isGroupLoading,
-    isProductLoading
+    isProductLoading,
+    handleSelectProduct
   } = useHome();
 
   if (isGroupLoading || isProductLoading) {
@@ -40,7 +40,7 @@ export function Home() {
         horizontal
         renderItem={({item}) => (
           <Group
-            select={groupSelect}
+            select={groupSelect == 0 ? group[0].id : groupSelect}
             onPress={() => selectGroup(item)}
             data={item}
           />
@@ -61,7 +61,7 @@ export function Home() {
           contentContainerStyle={s.contentFlat}
           renderItem={({item}) => (
             <Card
-            onPress={() => null}
+              onPress={() => handleSelectProduct(item)}
               data={item}
             />
           )}

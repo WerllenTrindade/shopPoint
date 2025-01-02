@@ -5,5 +5,6 @@ export type productType = {
     promotion_price: number;
     stock: number;
     photo_url: string;
-    group_id: number
+    group_id: number;
+    hash_id?: string;
   };

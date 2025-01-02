@@ -1,9 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Avatar from "../../../../components/Avatar";
-import { ShoppingBag, ShoppingCart } from "lucide-react-native";
+import { LogOut, ShoppingBag, ShoppingCart } from "lucide-react-native";
 import { theme } from "../../../../theme";
 
 export function HeaderHome() {
+
+  const handleSigOut = () => {
+    Alert.alert('Atenção!', 'Deseja deslogar o usuario?', [
+      {
+        text: 'Sim'
+      }
+    ])
+  }
+
   return (
     <View style={s.container}>
       <View style={s.contain}>
@@ -13,9 +22,9 @@ export function HeaderHome() {
           <Text style={s.text}>Desenvoledor</Text>
         </View>
       </View>
-      <View style={s.containIcon}>
-        <ShoppingCart size={20} color={theme.PRIMARY} />
-      </View>
+      <TouchableOpacity style={s.containIcon} onPress={handleSigOut}>
+        <LogOut size={20} color={theme.PRIMARY} />
+      </TouchableOpacity>
     </View>
   );
 }

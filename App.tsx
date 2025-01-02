@@ -4,7 +4,7 @@ import {SafeAreaView, StatusBar} from 'react-native';
 import {QueryClientProvider, QueryClient} from '@tanstack/react-query';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {RouterInitial} from './src/router/Stack.routes';
+import { Router } from './src/router/Router';
 // import { RouterInitial } from "./src/router/Stack.routes";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <QueryClientProvider client={query}>
         <StatusBar barStyle={'dark-content'} />
         <NavigationContainer>
-          <RouterInitial />
+          <Router />
         </NavigationContainer>
       </QueryClientProvider>
     </SafeAreaView>
