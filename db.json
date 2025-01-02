@@ -1,0 +1,120 @@
+{
+  "groups": [
+    { "id": 1, "name": "Electronics" },
+    { "id": 2, "name": "Books" },
+    { "id": 3, "name": "Clothing" },
+    { "id": 4, "name": "Toys" },
+    { "id": 5, "name": "Home Appliances" },
+    { "id": 6, "name": "Sports" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "price": 699,
+      "promotion_price": 599,
+      "stock": 50,
+      "group_id": 1,
+      "photo_url": "https://example.com/images/smartphone.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "price": 1200,
+      "promotion_price": null,
+      "stock": 30,
+      "group_id": 1,
+      "photo_url": "https://example.com/images/laptop.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Fiction Book",
+      "price": 20,
+      "promotion_price": 15,
+      "stock": 100,
+      "group_id": 2,
+      "photo_url": "https://example.com/images/fiction_book.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cookbook",
+      "price": 25,
+      "promotion_price": null,
+      "stock": 80,
+      "group_id": 2,
+      "photo_url": "https://example.com/images/cookbook.jpg"
+    },
+    {
+      "id": 5,
+      "name": "T-shirt",
+      "price": 15,
+      "promotion_price": 10,
+      "stock": 200,
+      "group_id": 3,
+      "photo_url": "https://example.com/images/tshirt.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Jeans",
+      "price": 40,
+      "promotion_price": 35,
+      "stock": 120,
+      "group_id": 3,
+      "photo_url": "https://example.com/images/jeans.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Action Figure",
+      "price": 30,
+      "promotion_price": 25,
+      "stock": 70,
+      "group_id": 4,
+      "photo_url": "https://example.com/images/action_figure.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Board Game",
+      "price": 45,
+      "promotion_price": null,
+      "stock": 60,
+      "group_id": 4,
+      "photo_url": "https://example.com/images/board_game.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Vacuum Cleaner",
+      "price": 200,
+      "promotion_price": 180,
+      "stock": 40,
+      "group_id": 5,
+      "photo_url": "https://example.com/images/vacuum_cleaner.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Air Fryer",
+      "price": 150,
+      "promotion_price": null,
+      "stock": 35,
+      "group_id": 5,
+      "photo_url": "https://example.com/images/air_fryer.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Basketball",
+      "price": 25,
+      "promotion_price": 20,
+      "stock": 90,
+      "group_id": 6,
+      "photo_url": "https://example.com/images/basketball.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Soccer Ball",
+      "price": 30,
+      "promotion_price": 25,
+      "stock": 85,
+      "group_id": 6,
+      "photo_url": "https://example.com/images/soccer_ball.jpg"
+    }
+  ]
+}
