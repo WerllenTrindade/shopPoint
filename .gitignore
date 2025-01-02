@@ -4,12 +4,7 @@
 
 # Xcode
 #
-app/build
-app/build/intermediates/cxx/Debug/*
 build/
-*.bat eol=lf
-*.json eol=lf
-*.txt eol=lf
 *.pbxuser
 !default.pbxuser
 *.mode1v3

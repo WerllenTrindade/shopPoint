@@ -33,7 +33,8 @@ export const s = StyleSheet.create({
     },
     img: {
         width: '100%',
-        height: height / 8
+        height: height / 8,
+        objectFit: 'contain'
     },
     footer: {
         alignItems: 'flex-end', 

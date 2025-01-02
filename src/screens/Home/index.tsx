@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {FlatList,  ImageBackground,  Text,  View} from 'react-native';
-import {s} from './styles';
+
 import Card from '../../components/Card';
-import { useProducts } from '../../api/product/getProduct';
-import { useGroups } from '../../api/group/getGroup';
 import Group from '../../components/Group';
-import Avatar from '../../components/Avatar';
-import { HeaderHome } from './_components/HeaderHome';
-import { theme } from '../../theme';
 import { Search } from '../../components/Search';
+import { HeaderHome } from './_components/HeaderHome';
+
+import {s} from './styles';
 import line from '../../assets/line.png'
-import axios from 'axios';
-import { GroupType } from '../../types/dto/groupType';
-import { useMutation } from '@tanstack/react-query';
+
 import { useHome } from './useHome';
+
 
 export function Home() {
   const {
@@ -22,7 +19,7 @@ export function Home() {
     group,
     product,
     isGroupLoading,
-     isProductLoading
+    isProductLoading
   } = useHome();
 
   if (isGroupLoading || isProductLoading) {

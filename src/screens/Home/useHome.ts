@@ -1,11 +1,11 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { GroupType } from "../../types/dto/groupType";
-import { getProductAPI, useProducts } from "../../api/product/getProduct";
-import { Alert } from "react-native";
+import { getProductAPI, getSearchProductAPI, useProducts } from "../../api/product/getProduct";
+import { Alert, TextInput } from "react-native";
 import { mapError, ResponseError } from "../../utils/Erros";
 import { QUERY_KEY_PRODUCT } from "../../constants/keyProduct";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useGroups } from "../../api/group/getGroup";
 
 export const useHome = () => {
@@ -13,13 +13,6 @@ export const useHome = () => {
   const [groupSelect, setGroupSelect] = useState(0)
   const { data: group = [], isLoading: isGroupLoading } = useGroups();
   const { data: product = [], isLoading: isProductLoading } = useProducts(groupSelect ?? group[0].id);
-
-
-
-  const handleActiveGroup = async (id: number) => {
-    const data = await getProductAPI(id);
-    return data;
-  };
 
   const { mutateAsync: activateGroup } = useMutation({
     mutationFn: getProductAPI,
@@ -31,14 +24,13 @@ export const useHome = () => {
       Alert.alert(`${errorMessage}`)
     },
   });
+
   
-
-
-  const selectGroup = async (group: GroupType) => {
+  const selectGroup = useCallback(async (group: GroupType) => {
     await activateGroup(group.id);
 
     setGroupSelect(group.id)
-  };
+  },[groupSelect])
 
   return {
     selectGroup,
@@ -46,6 +38,6 @@ export const useHome = () => {
     group,
     product,
     isGroupLoading,
-     isProductLoading
+    isProductLoading
   };
 };
